@@ -1,4 +1,4 @@
-package com.example.android.tflitecamerademo.RecognitionFirebase;
+package info.hannes.tflitecamera.recognitionFirebase;
 
 import android.app.AlertDialog;
 import android.graphics.Bitmap;
@@ -34,7 +34,6 @@ import java.util.List;
 import dmax.dialog.SpotsDialog;
 
 public class RecognitionFirebaseActivity extends AppCompatActivity {
-
 
     CameraView cameraView;
     Button btnDetect;
@@ -142,7 +141,7 @@ public class RecognitionFirebaseActivity extends AppCompatActivity {
 
     private void processDataResultCloud(List<FirebaseVisionCloudLabel> firebaseVisionCloudLabels) {
         for (FirebaseVisionCloudLabel label : firebaseVisionCloudLabels) {
-            Toast.makeText(this, "Resultado de Cloud: " + label.getLabel(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cloud result: " + label.getLabel(), Toast.LENGTH_SHORT).show();
         }
         if (waitingDialog.isShowing())
             waitingDialog.dismiss();
@@ -150,7 +149,7 @@ public class RecognitionFirebaseActivity extends AppCompatActivity {
 
     private void processDataResult(List<FirebaseVisionLabel> firebaseVisionLabels) {
         for (FirebaseVisionLabel label : firebaseVisionLabels) {
-            Toast.makeText(this, "Resultado del dispositivo: " + label.getLabel(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Result: " + label.getLabel(), Toast.LENGTH_SHORT).show();
         }
         if (waitingDialog.isShowing())
             waitingDialog.dismiss();

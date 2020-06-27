@@ -17,7 +17,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.android.tflitecamerademo.RecognitionObjectsTensorFlow.AutoFitTextureView2
+    <info.hannes.tflitecamera.recognitionObjectsTensorFlow.AutoFitTextureView2
         android:id="@+id/texture2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
