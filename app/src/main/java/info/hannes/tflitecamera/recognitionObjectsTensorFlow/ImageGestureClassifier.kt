@@ -17,7 +17,7 @@ package info.hannes.tflitecamera.recognitionObjectsTensorFlow
 import android.app.Activity
 import info.hannes.tflitecamera.BaseImageClassifier
 
-class ImageClassifier(activity: Activity) : BaseImageClassifier(activity) {
+class ImageGestureClassifier(activity: Activity) : BaseImageClassifier(activity) {
 
     override fun modelPathClassifier() = "hand_graph.lite"
     override fun labelPathClassifier() = "graph_label_strings.txt"

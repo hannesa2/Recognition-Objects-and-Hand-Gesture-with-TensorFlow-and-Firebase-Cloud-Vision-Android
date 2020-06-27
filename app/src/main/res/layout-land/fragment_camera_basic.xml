@@ -18,7 +18,7 @@
     android:layout_height="match_parent">
 
     <info.hannes.tflitecamera.AutoFitTextureView
-        android:id="@+id/textureView"
+        android:id="@+id/textureBasic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -32,7 +32,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/texture"
+        android:layout_toRightOf="@id/textureBasic"
         android:background="@color/control_background"
         android:orientation="horizontal">
 
@@ -43,7 +43,6 @@
             android:textColor="#FFF"
             android:textSize="20sp"
             android:textStyle="bold" />
-
 
     </FrameLayout>
 
