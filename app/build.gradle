@@ -58,8 +58,8 @@ dependencies {
     implementation 'com.wonderkiln:camerakit:0.13.1'
     implementation 'com.github.d-max:spots-dialog:1.1@aar'
 
-    implementation 'org.tensorflow:tensorflow-lite:+'
-    implementation 'org.tensorflow:tensorflow-android:1.2.0'
+    implementation 'org.tensorflow:tensorflow-lite:2.2.0'
+    implementation 'org.tensorflow:tensorflow-android:1.13.1'
 
     testImplementation 'junit:junit:4.13'
     implementation "androidx.core:core-ktx:+"
