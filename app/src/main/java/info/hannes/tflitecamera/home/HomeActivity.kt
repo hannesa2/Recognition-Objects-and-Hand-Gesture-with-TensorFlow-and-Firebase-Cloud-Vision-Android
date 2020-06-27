@@ -5,8 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.tflitecamerademo.R
 import info.hannes.tflitecamera.recognitionFirebase.RecognitionFirebaseActivity
-import info.hannes.tflitecamera.recognitionObjects.CameraActivity
-import info.hannes.tflitecamera.recognitionObjectsTensorFlow.Camera2Activity
+import info.hannes.tflitecamera.CameraActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -16,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         cardHand.setOnClickListener {
-            val intent = Intent(this@HomeActivity, Camera2Activity::class.java)
+            val intent = Intent(this@HomeActivity, CameraActivity::class.java)
             startActivity(intent)
         }
         cardObject.setOnClickListener {
