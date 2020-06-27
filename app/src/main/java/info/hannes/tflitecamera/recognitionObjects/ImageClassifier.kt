@@ -12,25 +12,15 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
+package info.hannes.tflitecamera.recognitionObjects
 
-package info.hannes.tflitecamera.recognitionObjects;
+import android.app.Activity
+import info.hannes.tflitecamera.BaseImageClassifier
 
-import android.app.Activity;
-import android.os.Bundle;
+class ImageClassifier(activity: Activity) : BaseImageClassifier(activity) {
 
-import com.example.android.tflitecamerademo.R;
+    override fun modelPathClassifier() = "graph.lite"
+    override fun labelPathClassifier() = "labels.txt"
 
-public class CameraActivity extends Activity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camera);
-        if (null == savedInstanceState) {
-            getFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.container, Camera2BasicFragment.newInstance())
-                    .commit();
-        }
-    }
+    override fun toText(label: Map.Entry<String, Float>, text: String) = String.format("\n%s: %4.2f", label.key, label.value) + text
 }
