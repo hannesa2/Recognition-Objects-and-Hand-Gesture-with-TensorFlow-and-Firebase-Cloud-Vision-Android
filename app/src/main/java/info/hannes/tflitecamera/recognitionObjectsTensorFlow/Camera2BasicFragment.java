@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package com.example.android.tflitecamerademo.RecognitionObjectsTensorFlow;
+package info.hannes.tflitecamera.recognitionObjectsTensorFlow;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -69,15 +69,8 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Fragmentos básicos para la cámara.
- */
-public class Camera2BasicFragment extends Fragment
-        implements FragmentCompat.OnRequestPermissionsResultCallback {
+public class Camera2BasicFragment extends Fragment        implements FragmentCompat.OnRequestPermissionsResultCallback {
 
-    /**
-     * Tag for the {@link Log}.
-     */
     private static final String TAG = "Hand gesture Recognition";
 
     private static final String FRAGMENT_DIALOG = "dialog";
@@ -85,30 +78,15 @@ public class Camera2BasicFragment extends Fragment
     private static final String HANDLE_THREAD_NAME = "CameraBackground";
 
     private static final int PERMISSIONS_REQUEST_CODE = 1;
-    /**
-     * Ancho máximo de vista previa garantizado por Camera2 API
-     */
     private static final int MAX_PREVIEW_WIDTH = 4608;
-    /**
-     * Máxima altura de previsualización garantizada por Camera2 API
-     */
     private static final int MAX_PREVIEW_HEIGHT = 2592;
     private final Object lock = new Object();
     private boolean runClassifier = false;
     private boolean checkedPermissions = false;
     private TextView textView, textViewGesture;
     private ImageClassifier classifier;
-    /**
-     * Identificador de la corriente  {@link CameraDevice}.
-     */
     private String cameraId;
-    /**
-     * An {@link AutoFitTextureView2} para la vista previa de la cámara.
-     */
     private AutoFitTextureView2 textureView;
-    /**
-     * A {@link CameraCaptureSession } para la vista previa de la cámara.
-     */
     private CameraCaptureSession captureSession;
     /**
      * Una referencia al abierto {@link CameraDevice}.

@@ -1,13 +1,12 @@
-package com.example.android.tflitecamerademo.Home
+package info.hannes.tflitecamera.home
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.tflitecamerademo.R
-import com.example.android.tflitecamerademo.RecognitionFirebase.RecognitionFirebaseActivity
-import com.example.android.tflitecamerademo.RecognitionObjects.CameraActivity
-import com.example.android.tflitecamerademo.RecognitionObjectsTensorFlow.Camera2Activity
+import info.hannes.tflitecamera.recognitionFirebase.RecognitionFirebaseActivity
+import info.hannes.tflitecamera.recognitionObjects.CameraActivity
+import info.hannes.tflitecamera.recognitionObjectsTensorFlow.Camera2Activity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {

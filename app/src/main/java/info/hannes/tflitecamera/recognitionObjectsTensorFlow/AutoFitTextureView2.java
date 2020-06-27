@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package com.example.android.tflitecamerademo.RecognitionObjectsTensorFlow;
+package info.hannes.tflitecamera.recognitionObjectsTensorFlow;
 
 import android.content.Context;
 import android.util.AttributeSet;

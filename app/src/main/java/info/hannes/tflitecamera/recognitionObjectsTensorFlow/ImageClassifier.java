@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package com.example.android.tflitecamerademo.RecognitionObjects;
+package info.hannes.tflitecamera.recognitionObjectsTensorFlow;
 
 import android.app.Activity;
 import android.content.res.AssetFileDescriptor;
@@ -38,39 +38,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-/**
- * Classifies images with Tensorflow Lite.
- */
 public class ImageClassifier {
 
     static final int DIM_IMG_SIZE_X = 224;
     static final int DIM_IMG_SIZE_Y = 224;
-    /**
-     * Tag for the {@link Log}.
-     */
     private static final String TAG = "HandgestureRecognition";
-    /**
-     * Nombre del archivo de modelo almacenado en activos.
-     */
-    private static final String MODEL_PATH = "graph.lite";
-    /**
-     * Nombre del archivo de etiqueta almacenado en activos.
-     */
-    private static final String LABEL_PATH = "labels.txt";
-    /**
-     * Número de resultados que se muestran en la interfaz de usuario.
-     */
-    private static final int RESULTS_TO_SHOW = 3;
-    /**
-     * Dimensiones de las entradas.
-     */
+    private static final String MODEL_PATH = "hand_graph.lite";
+    private static final String LABEL_PATH = "graph_label_strings.txt";
+    private static final int RESULTS_TO_SHOW = 5;
     private static final int DIM_BATCH_SIZE = 1;
     private static final int DIM_PIXEL_SIZE = 3;
     private static final int IMAGE_MEAN = 128;
     private static final float IMAGE_STD = 128.0f;
     private static final int FILTER_STAGES = 3;
     private static final float FILTER_FACTOR = 0.4f;
-    /* Búferes preasignados para almacenar datos de imagen */
     private int[] intValues = new int[DIM_IMG_SIZE_X * DIM_IMG_SIZE_Y];
     /**
      * Una instancia de la clase de controlador para ejecutar la inferencia del modelo con Tensorflow Lite.
@@ -239,7 +220,42 @@ public class ImageClassifier {
         final int size = sortedLabels.size();
         for (int i = 0; i < size; ++i) {
             Map.Entry<String, Float> label = sortedLabels.poll();
-            textToShow = String.format("\n%s: %4.2f", label.getKey(), label.getValue()) + textToShow;
+            switch (label.getKey()) {
+                case "0":
+                    textToShow = String.format("\nNumero (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "1":
+                    textToShow = String.format("\nNumero (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "2":
+                    textToShow = String.format("\nNumero (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "3":
+                    textToShow = String.format("\nNumero (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "4":
+                    textToShow = String.format("\nNumero (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "5":
+                    textToShow = String.format("\nNumero (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "a":
+                    textToShow = String.format("\nVocal (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "e":
+                    textToShow = String.format("\nVocal (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "i":
+                    textToShow = String.format("\nVocal (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "o":
+                    textToShow = String.format("\nVocal (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+                case "u":
+                    textToShow = String.format("\nVocal (%s) = %4.2f", label.getKey(), label.getValue()) + textToShow;
+                    break;
+            }
+
         }
         return textToShow;
     }

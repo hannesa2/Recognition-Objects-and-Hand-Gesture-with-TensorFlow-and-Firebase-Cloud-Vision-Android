@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package com.example.android.tflitecamerademo.RecognitionObjects;
+package info.hannes.tflitecamera.recognitionObjectsTensorFlow;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ import com.example.android.tflitecamerademo.R;
 /**
  * Main {@code Activity} clase para la aplicación de la cámara.
  */
-public class CameraActivity extends Activity {
+public class Camera2Activity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
