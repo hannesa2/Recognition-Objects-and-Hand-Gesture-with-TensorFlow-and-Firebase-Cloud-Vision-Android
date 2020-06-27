@@ -42,7 +42,7 @@ import androidx.core.content.ContextCompat
 import androidx.legacy.app.FragmentCompat
 import com.example.android.tflitecamerademo.R
 import info.hannes.tflitecamera.BaseImageClassifier
-import kotlinx.android.synthetic.main.fragment_camera2_basic.*
+import kotlinx.android.synthetic.main.fragment_camera_basic.*
 import java.io.IOException
 import java.lang.Long
 import java.util.*
@@ -50,7 +50,7 @@ import java.util.concurrent.Semaphore
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
 
-class Camera2BasicFragment : Fragment(), FragmentCompat.OnRequestPermissionsResultCallback {
+class CameraBasicFragment : Fragment(), FragmentCompat.OnRequestPermissionsResultCallback {
     private val lock = Any()
     private var runClassifier = false
     private var checkedPermissions = false
@@ -131,7 +131,7 @@ class Camera2BasicFragment : Fragment(), FragmentCompat.OnRequestPermissionsResu
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater?.inflate(R.layout.fragment_camera2_basic, container, false)
+        return inflater?.inflate(R.layout.fragment_camera_basic, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -462,8 +462,8 @@ class Camera2BasicFragment : Fragment(), FragmentCompat.OnRequestPermissionsResu
             }
         }
 
-        fun newInstance(): Camera2BasicFragment {
-            return Camera2BasicFragment()
+        fun newInstance(): CameraBasicFragment {
+            return CameraBasicFragment()
         }
     }
 }

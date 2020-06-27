@@ -3,7 +3,7 @@ package info.hannes.tflitecamera
 import android.app.Activity
 import android.os.Bundle
 import com.example.android.tflitecamerademo.R
-import info.hannes.tflitecamera.recognitionObjects.Camera2BasicFragment
+import info.hannes.tflitecamera.recognitionObjects.CameraBasicFragment
 
 class CameraActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +12,7 @@ class CameraActivity : Activity() {
         if (null == savedInstanceState) {
             fragmentManager
                     .beginTransaction()
-                    .replace(R.id.container, Camera2BasicFragment.newInstance())
+                    .replace(R.id.container, CameraBasicFragment.newInstance())
                     .commit()
         }
     }
