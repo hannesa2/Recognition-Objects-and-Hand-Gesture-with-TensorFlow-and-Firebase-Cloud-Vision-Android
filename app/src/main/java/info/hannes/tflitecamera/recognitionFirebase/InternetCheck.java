@@ -1,4 +1,4 @@
-package com.example.android.tflitecamerademo.RecognitionFirebase;
+package info.hannes.tflitecamera.recognitionFirebase;
 
 import android.os.AsyncTask;
 

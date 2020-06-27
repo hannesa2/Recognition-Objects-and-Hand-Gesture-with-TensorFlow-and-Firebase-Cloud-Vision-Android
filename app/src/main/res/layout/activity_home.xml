@@ -5,7 +5,7 @@
     android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.tflitecamerademo.Home.HomeActivity">
+    tools:context="com.example.android.tflitecamerademo.info.hannes.tflitecamera.home.HomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

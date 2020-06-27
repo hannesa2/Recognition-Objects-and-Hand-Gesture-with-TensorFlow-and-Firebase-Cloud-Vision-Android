@@ -33,13 +33,13 @@
         android:largeHeap="true"
         android:theme="@style/MaterialTheme">
         <activity
-            android:name=".RecognitionObjects.CameraActivity"
+            android:name="info.hannes.tflitecamera.recognitionObjects.CameraActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".RecognitionObjectsTensorFlow.Camera2Activity"
+            android:name="info.hannes.tflitecamera.recognitionObjectsTensorFlow.Camera2Activity"
             android:label="@string/app_name" />
         <activity
-            android:name=".Home.HomeActivity"
+            android:name="info.hannes.tflitecamera.home.HomeActivity"
             android:allowBackup="true"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -49,7 +49,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RecognitionFirebase.RecognitionFirebaseActivity"
+            android:name="info.hannes.tflitecamera.recognitionFirebase.RecognitionFirebaseActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="com.google.firebase.ml.vision.DEPENDENCIES"
