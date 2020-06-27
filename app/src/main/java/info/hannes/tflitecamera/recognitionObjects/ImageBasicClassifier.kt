@@ -17,7 +17,7 @@ package info.hannes.tflitecamera.recognitionObjects
 import android.app.Activity
 import info.hannes.tflitecamera.BaseImageClassifier
 
-class ImageClassifier(activity: Activity) : BaseImageClassifier(activity) {
+class ImageBasicClassifier(activity: Activity) : BaseImageClassifier(activity) {
 
     override fun modelPathClassifier() = "graph.lite"
     override fun labelPathClassifier() = "labels.txt"

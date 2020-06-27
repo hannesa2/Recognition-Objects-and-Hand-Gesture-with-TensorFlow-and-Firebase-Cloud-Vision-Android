@@ -39,7 +39,10 @@
         android:theme="@style/MaterialTheme"
         tools:ignore="AllowBackup">
         <activity
-            android:name="info.hannes.tflitecamera.CameraActivity"
+            android:name="info.hannes.tflitecamera.recognitionObjects.CameraBasicActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="info.hannes.tflitecamera.recognitionObjectsTensorFlow.CameraGestureActivity"
             android:label="@string/app_name" />
         <activity
             android:name="info.hannes.tflitecamera.home.HomeActivity"
