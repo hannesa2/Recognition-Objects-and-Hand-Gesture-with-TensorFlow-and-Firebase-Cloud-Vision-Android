@@ -12,18 +12,18 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
-package info.hannes.tflitecamera.recognitionObjectsTensorFlow
+package info.hannes.tflitecamera
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.TextureView
 
-class AutoFitTextureView2 @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null, defStyle: Int = 0) : TextureView(context, attrs, defStyle) {
+class AutoFitTextureView @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null, defStyle: Int = 0) : TextureView(context, attrs, defStyle) {
     private var mRatioWidth = 0
     private var mRatioHeight = 0
 
     fun setAspectRatio(width: Int, height: Int) {
-        require(!(width < 0 || height < 0)) { "Size cannot be negative." }
+        require(!(width < 0 || height < 0)) { "Size can't be negative" }
         mRatioWidth = width
         mRatioHeight = height
         requestLayout()

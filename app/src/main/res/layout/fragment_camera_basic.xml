@@ -17,33 +17,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <info.hannes.tflitecamera.recognitionObjects.AutoFitTextureView
-        android:id="@+id/textureView"
+    <info.hannes.tflitecamera.AutoFitTextureView
+        android:id="@+id/texture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 
     <FrameLayout
         android:id="@+id/control"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="112dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/texture"
+        android:layout_margin="10dp"
         android:background="@color/control_background"
-        android:orientation="horizontal">
+        android:elevation="10dp">
 
-        <TextView android:id="@+id/text"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
+            android:paddingLeft="80dp"
             android:textColor="#FFF"
             android:textSize="20sp"
             android:textStyle="bold" />
-
 
     </FrameLayout>
 
